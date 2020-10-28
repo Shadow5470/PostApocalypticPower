@@ -1,68 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-  table {
-    width: 100%;
-  }
+	<title>Plumber Mr. Turner</title>
 
-  td {
-    width: 30%;
-    position: relative;
-  }
-
-  td:after {
-    content: '';
-    display: block;
-    margin-top: 100%;
-  }
-
-  td .content {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-
-  td img {
-    width: 50%;
-    height: 50%;
-  }
-  </style>
 </head>
 <body>
-<table id="yo"style="width:100%">
+	<style type="text/css">
+		body {
+			margin: 0;
+			height: 100vh;
+			width: 100vw;
+			background: #22303c;
+		}
 
-  <tr>
-    <td><img src="CityPipeCorner.png"></td>
-    <td><img src="CityPipeCorner.png"></td>
-    <td><img src="CityPipeCorner.png"></td>
-    <td><img src="CityPipeCorner.png"></td>
-  </tr>
-  <tr>
-    <td><img src="CityPipeCorner.png"></td>
-    <td><img src="CityPipeCorner.png"></td>
-    <td><img src="CityPipeCorner.png"></td>
-    <td><img src="CityPipeCorner.png"></td>
-  </tr>
-  <tr>
-    <td><img src="CityPipeCorner.png"></td>
-    <td><img src="CityPipeCorner.png"></td>
-    <td><img src="CityPipeCorner.png"></td>
-    <td><img src="CityPipeCorner.png"></td>
-  </tr>
-  <tr>
-    <td><img src="CityPipeCorner.png"></td>
-    <td><img src="CityPipeCorner.png"></td>
-    <td><img src="CityPipeCorner.png"></td>
-    <td><img src="CityPipeCorner.png"></td>
-  </tr>
+		.game_div {
+			display: block;
+			margin: 0 auto;
+		}
 
-
-</table>
-
+		#game {
+			display: block;
+			margin: 0 auto;
+		}
+	</style>
+	<div class="game_div">
+		<canvas id="game" width="800" height="600"></canvas>
+	</div>
 </body>
 </html>
-<script src="Gamer.js"></script>
-<script src="PipesBackend.js"></script>
+<script type="text/javascript" src="game.js"></script>
