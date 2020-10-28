@@ -1,44 +1,68 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <style>
-    .grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  background-color: #2196F3;
-  padding: 2%;
-  height:90%;
-  width:80%;
-}
-.grid-item {
-  background-image:"CityPipeCorner.png";
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 2%;
+<style>
+  table {
+    width: 100%;
+  }
 
+  td {
+    width: 30%;
+    position: relative;
+  }
 
-  text-align: center;
-}
-    </style>
+  td:after {
+    content: '';
+    display: block;
+    margin-top: 100%;
+  }
 
+  td .content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  td img {
+    width: 50%;
+    height: 50%;
+  }
+  </style>
 </head>
 <body>
-  <div class="grid-container">
-    <div id="1g"class="grid-item"></div>
-    <div id="2g"class="grid-item"></div>
-    <div id="3g"class="grid-item"></div>
-    <div id="4g"class="grid-item"></div>
-    <div id="5g"class="grid-item"></div>
-    <div id="6g"class="grid-item"></div>
-    <div id="7g"class="grid-item"></div>
-    <div id="8g"class="grid-item"></div>
-    <div id="9g" class="grid-item"></div>
-    <div id="10g" class="grid-item"></div>
-    <div id="11g"class="grid-item"></div>
-    <div id="12g"class="grid-item"></div>
-    <div id="13g"class="grid-item"></div>
-    <div id="14g" class="grid-item"></div>
-    <div id="15g" class="grid-item"></div>
-    <div id="16g"class="grid-item"></div>
-  </div>
+<table id="yo"style="width:100%">
+
+  <tr>
+    <td><img src="CityPipeCorner.png"></td>
+    <td><img src="CityPipeCorner.png"></td>
+    <td><img src="CityPipeCorner.png"></td>
+    <td><img src="CityPipeCorner.png"></td>
+  </tr>
+  <tr>
+    <td><img src="CityPipeCorner.png"></td>
+    <td><img src="CityPipeCorner.png"></td>
+    <td><img src="CityPipeCorner.png"></td>
+    <td><img src="CityPipeCorner.png"></td>
+  </tr>
+  <tr>
+    <td><img src="CityPipeCorner.png"></td>
+    <td><img src="CityPipeCorner.png"></td>
+    <td><img src="CityPipeCorner.png"></td>
+    <td><img src="CityPipeCorner.png"></td>
+  </tr>
+  <tr>
+    <td><img src="CityPipeCorner.png"></td>
+    <td><img src="CityPipeCorner.png"></td>
+    <td><img src="CityPipeCorner.png"></td>
+    <td><img src="CityPipeCorner.png"></td>
+  </tr>
+
+
+</table>
+
 </body>
 </html>
+<script src="Gamer.js"></script>
+<script src="PipesBackend.js"></script>
