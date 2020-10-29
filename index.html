@@ -1,27 +1,31 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <style>
-  body{
-    background-color: #A5BA9E;
-  }
-  #title{
-    position: absolute;
-    top:0%;
-    left:10%;
-    width:80%;
-    height:100%;
-  }#start{
-    position: absolute;
-    top: 22%;
-    left:24%;
-    z-index: 2;
-    height: 50%;
-    width: 50%;
-  }
-  </style>
+	<title>Plumber Mr. Turner</title>
+	<script type="text/javascript" src="game.js"></script>
+	<script type="text/javascript" src="maps.js"></script>
 </head>
 <body>
-  <img id="start" src="start.png">
-  <img id= "title"src="Title Screen.png"></img>
+	<style type="text/css">
+		body {
+			margin: 0;
+			height: 100vh;
+			width: 100vw;
+			background: #22303c;
+		}
+
+		.game_div {
+			display: block;
+			margin: 0 auto;
+		}
+
+		#game {
+			display: block;
+			margin: 0 auto;
+		}
+	</style>
+	<div class="game_div">
+		<canvas id="game" width="800" height="600"></canvas>		
+	</div>
 </body>
 </html>
