@@ -1,5 +1,5 @@
 'use strict'
-
+alert("Welcome to the hydropower plant. You need to redirect the water through the pipes to make sure that it can run to the hydropower station. Make sure that you use every pipe!")
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -16,7 +16,7 @@ class Batch {
 	add(object) {
 		this.list.push(object);
 		//console.log(this.list);
-	}	
+	}
 
 	draw() {
 		this.game.ctx.clearRect(0, 0, this.game.canvasSize, this.game.canvasSize);
@@ -70,7 +70,7 @@ class Progress {
 class Game {
 	spriteSheet = new Image()
 	pipeList = {}
-	
+
 	constructor(id, spriteSheetSrc, map, gameloop) {
 		this.map = map;
 		this.canvas = document.getElementById(id);
@@ -81,12 +81,12 @@ class Game {
 		this.progress = new Progress(this);
 
 		//spriteSheetSrc = "spritesheet.png"
-		
+
 		let game = this;
 		this.spriteSheet.onload = function() {
 			gameloop(game);
 		}
-		
+
 		this.spriteSheet.src = spriteSheetSrc;
 		this.initClick();
 	}
@@ -94,7 +94,7 @@ class Game {
 	inteli_resize() {
 		let bodyHeight = document.body.clientHeight;
 		let bodyWidth = document.body.clientWidth;
-		
+
 		if (bodyHeight < bodyWidth) {
 			this.canvasSize = bodyHeight;
 		}else {
@@ -215,7 +215,7 @@ class Pipe {
 
 	calculateNextState(state) {
 		let nextState;
-		
+
 		if (this.type === "corner") {
 			if(state === 3) {
 				nextState = 0;

@@ -1,0 +1,42 @@
+<html>
+<head>
+  <style>
+    body{
+      background-color: #096615;
+    }
+    #Screen{
+      position:absolute;
+      top:0%;
+      left:19.3%;
+      width:60%;
+      height:100%;
+      z-index:1;
+    }#hydro{
+      position:absolute;
+      top:95%;
+      left:19.3%;
+z-index:2;
+    }#biomass{
+      position:absolute;
+      top:10%;
+      left:63%;
+      z-index:2;
+    }
+    #wind{
+      position:absolute;
+      top:55%;
+      left:68%;
+      z-index:2;
+    }
+    </style>
+</head>
+<body>
+  <input type="button" id='hydro' onclick="hydro()" value="Hydro Power"></input>
+  <input type="button" id="biomass" onclick="biomass()" value="Biomass"></input>
+  <input type="button" id="wind" value="Wind Power" onclick="wind()"></input>
+  <img id="Screen" src="Screen.png"></img>
+</body>
+
+
+</html>
+<script src="midway.js"></script>

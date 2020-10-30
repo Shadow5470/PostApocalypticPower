@@ -131,6 +131,7 @@ block.addEventListener('animationiteration', () => {
     if(counter1===21){
       alert("Congradulations, you won!");
         block.style.animation = "none";
+        window.location.href = "https://shadow5470.github.io/PostApocalypticPower/Midway/";
     }
 });
 setInterval(function(){
@@ -143,7 +144,7 @@ setInterval(function(){
         document.getElementById('score').value=''+counter1+'';
 
       }else{
-        alert("Game over");
+        alert("Game over, Try again");
         location.reload();
         block.style.animation = "none";
       }
