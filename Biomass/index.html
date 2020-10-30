@@ -1,27 +1,27 @@
-<html>
+<!-- <html>
 <head>
   <style>
-body{
+body {
  background-color:#104C0B;
 }
 @keyframes objectA {
-     from{
+     0%{
        top: -20%;
 
      }
-     to{
-       top: 180%;
+     100%{
+       top: 82%;
 
        }
      }
 #left{
   position: absolute;
   top:-20%;
-  left:20%;
+  left:22%;
   height:18%;
   width:18%;
   z-index: 4;
-  animation: objectA 3s linear infinite;
+  animation: objectA 2s linear infinite;
 }
 #center{
   position: absolute;
@@ -30,7 +30,7 @@ body{
   height:18%;
   width:18%;
   z-index: 4;
-    animation: objectA 3s linear infinite;
+    animation: objectA 2s linear infinite;
 
 }#right{
   position: absolute;
@@ -39,7 +39,7 @@ body{
   height:18%;
   width:18%;
   z-index: 4;
-  animation: objectA 3s linear infinite;
+  animation: objectA 2s linear infinite;
 
 }
 @keyframes animate {
@@ -54,11 +54,11 @@ body{
 
      #start{
        position: absolute;
-       top:20%;
-       left:10%;
+       top:1%;
+       left:14%;
        z-index: 2;
-       height: 50%;
-       width: 83%;
+       height: 57%;
+       width: 70%;
      }
        #runwayDiv{
          position: absolute;
@@ -70,13 +70,88 @@ body{
            background-image:url("RunwayBio.png");
            animation: animate 0s linear infinite;
        }
+       #player{
+         position: absolute;
+         top:50%;
+         left:42%;*{
+    padding: 0;
+    margin: 0;
+}
+#game{
+    width: 300px;
+    height: 500px;
+    border: 1px solid black;
+    margin: auto;
+    box-sizing: border-box;
+}
+#character{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    top: 300px;
+    left: 0px;
+}
+#white{
+    top: 500px;
+    z-index: 100;
+    position: absolute;
+    width: 300px;
+    height: 130px;
+    background-color: white;
+}
+#block{
+    width: 100px;
+    height: 100px;
+    top: 500px;
+    background-color: black;
+    position: relative;
+    animation: slide 1s infinite linear;
+}
+@keyframes slide{
+    0%{top:-100px};
+    100%{top:500px};
+}
+#left, #right{
+    width:50%;
+    position: absolute;
+    height: 500px;
+}
+#right{
+    left: 50%;
+}
+         z-index: 4;
+         height: 27%;
+         width: 15%;
+       }
   </style>
   </head>
-  <body id="body">
+  <body onkeydown="keyPressing(event)" id="body">
     <img id="start" src="start.png" onClick="Startup()">
-
+    <img id="player" src='Mr.Peters (1).png'></img>
     <div id="runwayDiv"></div>
     </body>
 
 </html>
-<script src="backend.js"></script>
+<script src="script.js"></script> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <b><input id="score" value="0"></input></b>
+    <div id="game">
+        <div id="left"></div>
+        <div id="right"></div>
+        <div id="block"></div>
+        <div id="character"></div>
+        <div id="white"></div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

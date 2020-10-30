@@ -29,7 +29,10 @@ class Batch {
 
 class Progress {
 	correctPipes = 0;
+	winEvent = new Event("game_won");
+
 	constructor(game) {
+		this.game = game;
 		this.pipeNumber = game.map.length;
 	}
 
@@ -54,7 +57,11 @@ class Progress {
 		console.log("progress: ", percentage, "%");
 
 		if (percentage === 100) {
-			window.alert("game won");
+			//window.alert("game won");
+			document.dispatchEvent(this.winEvent);
+			this.game.evaluateClick = function() {
+				console.log("game already won");
+			};
 		}
 	}
 }
@@ -203,7 +210,7 @@ class Pipe {
 			this.game.progress.sub();
 		}
 
-		console.log(this.game.progress.correctPipes);
+		//console.log(this.game.progress.correctPipes);
 	}
 
 	calculateNextState(state) {
@@ -257,7 +264,9 @@ function gameLoop(game) {
 }
 
 function main() {
-	let game = new Game("game", "with_back.svg", mapEasy, gameLoop)
+	let mapNum = getRandomInt(0, mapEasy.length);
+	let gameMap = mapEasy[mapNum];
+	let game = new Game("game", "with_back.svg", gameMap, gameLoop)
 }
 
 window.onload = main;

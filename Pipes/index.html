@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!--game title here-->
 	<title>Plumber Mr. Turner</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script type="text/javascript" src="game.js"></script>
+	<!--map in this js file-->
 	<script type="text/javascript" src="maps.js"></script>
+	<script type="text/javascript" src="ui.js"></script>
 </head>
 <body>
 	<style type="text/css">
-		body {
+		body {	
 			margin: 0;
 			height: 100vh;
 			width: 100vw;
-			background: #22303c;
+			background: #000000;
+			color: #ffffff;
+			font-family: arial;
 		}
 
 		.game_div {
 			display: block;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
 			margin: 0 auto;
 		}
 
@@ -23,9 +33,46 @@
 			display: block;
 			margin: 0 auto;
 		}
+
+		.win_screen {
+			display: block;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			padding: 25px;
+			width: 180px;
+			background: #6b9c31;
+			color: #f7dede;
+			box-shadow: 2px 2px 4px black;
+		}
+
+		.hide {
+			display: none;
+		}
+
+		.play_again {
+			display: block;
+			padding: 8px;
+			margin: 0 auto;
+			background: #f76342;
+			color: #f7dede;
+			text-decoration: none;
+			border-radius: 10px;
+			font-weight: bold;
+			box-shadow: 1px 1px 2px black;
+
+		}
 	</style>
 	<div class="game_div">
-		<canvas id="game" width="800" height="600"></canvas>		
+		<canvas id="game" width="800" height="600"></canvas>	
+	</div>
+	<div class="win_screen hide">
+		<!--change win text here-->
+		<h1>You Won</h1>
+		<h2>pipes rock</h2>
+		<a class="play_again" href="">Play Again</a>
 	</div>
 </body>
 </html>
