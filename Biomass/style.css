@@ -14,8 +14,8 @@ body{
     background-color:#38CDCB;
 }#score{
   position: absolute;
-  top: 100px;
-  left: 500px;
+  top: 14%;
+  left: 32.4%;
   width:100px;
   height:30px;
 }#scoreTop{
