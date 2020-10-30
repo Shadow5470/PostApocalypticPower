@@ -13,20 +13,37 @@
       z-index:1;
     }#hydro{
       position:absolute;
-      top:95%;
+      top:86%;
+      border-radius: 8px;
       left:19.3%;
+      font-size: 20px;
+      color: white;
+      background-color: #555352;
 z-index:2;
     }#biomass{
       position:absolute;
       top:10%;
       left:63%;
+      border-radius: 8px;
       z-index:2;
+      font-size: 20px;
+      color: white;
+      background-color: #54CA37;
     }
     #wind{
       position:absolute;
       top:55%;
       left:68%;
       z-index:2;
+      font-size: 20px;
+      border-radius: 8px;
+      color: white;
+      background-color: #2B691C;
+    }#title{
+      position: absolute;
+      top:1%;
+      left:29%;
+      z-index: 5;
     }
     </style>
 </head>
@@ -35,6 +52,7 @@ z-index:2;
   <input type="button" id="biomass" onclick="biomass()" value="Biomass"></input>
   <input type="button" id="wind" value="Wind Power" onclick="wind()"></input>
   <img id="Screen" src="Screen.png"></img>
+  <img id="title" src="articAliens.png"></img>
 </body>
 
 
